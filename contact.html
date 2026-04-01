@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定制咨询 | 宠忆 - 宠物纪念品</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-container {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .contact-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #666;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f5a623;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #f5a623, #ff6b6b);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .success-msg {
+            color: #27ae60;
+            padding: 15px;
+            background: #e8f8f0;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .login-prompt {
+            text-align: center;
+            padding: 40px;
+            background: #fff5e6;
+            border-radius: 12px;
+            margin: 60px auto;
+            max-width: 400px;
+        }
+        .login-prompt h3 {
+            color: #f5a623;
+            margin-bottom: 20px;
+        }
+        .login-prompt a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #f5a623;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .user-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">宠忆</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="products.html" class="nav-link">产品分类</a>
+                <a href="stories.html" class="nav-link">用户故事</a>
+                <a href="about.html" class="nav-link">关于我们</a>
+                <a href="faq.html" class="nav-link">常见问题</a>
+                <a href="contact.html" class="nav-link nav-cta">定制咨询</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div id="contactContent">
+            <div class="contact-container">
+                <h1 class="contact-title">🐾 定制咨询</h1>
+                
+                <div id="userInfo" class="user-info" style="display:none;">
+                    <p>登录账号：<span id="userEmail"></span></p>
+                </div>
+
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>您的称呼 / Name</label>
+                        <input type="text" id="name" required placeholder="请输入您的称呼">
+                    </div>
+                    <div class="form-group">
+                        <label>联系电话 / Phone</label>
+                        <input type="tel" id="phone" required placeholder="请输入联系电话">
+                    </div>
+                    <div class="form-group">
+                        <label>宠物名称 / Pet Name</label>
+                        <input type="text" id="petName" placeholder="请输入宠物名称（选填）">
+                    </div>
+                    <div class="form-group">
+                        <label>咨询内容 / Message</label>
+                        <textarea id="message" required placeholder="请描述您的需求..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submitBtn">提交咨询</button>
+                </form>
+
+                <div id="successMessage" class="success-msg" style="display:none;">
+                    ✅ 咨询已提交！我们会尽快联系您
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于我们</h4>
+                    <p>专注宠物纪念品定制，为您的爱宠留下永恒的记忆</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="products.html">产品分类</a>
+                    <a href="about.html">关于我们</a>
+                    <a href="contact.html">联系我们</a>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>邮箱：contact@petmemory.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pet Memory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Check login status
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user') || 'null');
+        
+        if (token && user) {
+            document.getElementById('userInfo').style.display = 'block';
+            document.getElementById('userEmail').textContent = user.email;
+            if (!document.getElementById('name').value) {
+                document.getElementById('name').value = user.name || '';
+            }
+        }
+
+        // Handle form submit
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('successMessage');
+            
+            btn.disabled = true;
+            btn.textContent = '提交中...';
+            
+            // Simulate form submission
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            document.getElementById('contactForm').style.display = 'none';
+            successMsg.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

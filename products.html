@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品分类 | 宠忆 - 宠物纪念品</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="zh">中文</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text" data-zh="宠忆" data-en="Pet Memory">宠忆</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link" data-zh="首页" data-en="Home">首页</a>
+                <a href="products.html" class="nav-link active" data-zh="产品分类" data-en="Products">产品分类</a>
+                <a href="stories.html" class="nav-link" data-zh="用户故事" data-en="Stories">用户故事</a>
+                <a href="about.html" class="nav-link" data-zh="关于我们" data-en="About">关于我们</a>
+                <a href="faq.html" class="nav-link" data-zh="常见问题" data-en="FAQ">常见问题</a>
+                <a href="contact.html" class="nav-link nav-cta" data-zh="定制咨询" data-en="Contact">定制咨询</a>
+            </nav>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 data-zh="产品分类" data-en="Our Products">产品分类</h1>
+            <p data-zh="精心制作，每一件都是独一无二的纪念品" data-en="Carefully crafted, each piece is a unique memorial">精心制作，每一件都是独一无二的纪念品</p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded from API -->
+                <p class="loading">加载中...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-zh="关于我们" data-en="About Us">关于我们</h4>
+                    <p data-zh="专注宠物纪念品定制，为您的爱宠留下永恒的记忆" data-en="Professional pet memorial products, creating eternal memories for your beloved pets">专注宠物纪念品定制，为您的爱宠留下永恒的记忆</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-zh="快速链接" data-en="Quick Links">快速链接</h4>
+                    <a href="products.html" data-zh="产品分类" data-en="Products">产品分类</a>
+                    <a href="about.html" data-zh="关于我们" data-en="About Us">关于我们</a>
+                    <a href="contact.html" data-zh="联系我们" data-en="Contact Us">联系我们</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-zh="联系方式" data-en="Contact">联系方式</h4>
+                    <p data-zh="邮箱：contact@petmemory.com" data-en="Email: contact@petmemory.com">邮箱：contact@petmemory.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pet Memory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
